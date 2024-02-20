@@ -32,3 +32,11 @@ for (let i = 0; i < 10; i++) {
 
   console.log(i);
 }
+
+//nested loop
+for (let i = 0; i < 5; i++) {
+  for (let j = 0; j < 2; j++) {
+    if (j === 0) console.log(`i run for ${i} time`);
+    console.log(`j run for ${j} time`);
+  }
+}
