@@ -20,7 +20,8 @@ clearInterval(id2)
 */
 
 // async await
-/*async function getData(url) {
+/*
+async function getData(url) {
   const res = await fetch(url);
   const res2 = await fetch(res.url);
   const res3 = await fetch(res2.url);
@@ -37,12 +38,12 @@ async function ran() {
 //promise
 
 const myPromise = new Promise((resolve, reject) => {
-    const data = "ipl";
-    if (data === "ipl") {
-        resolve(data);
-    } else {
-        reject("no data");
-    }
+  const data = "ipl";
+  if (data === "ipl") {
+    resolve(data);
+  } else {
+    reject("no data");
+  }
 });
 
 /*myPromise.then((data) => console.log(data)).catch((err) => console.log(err));*/
@@ -60,3 +61,43 @@ const myPromise = new Promise((resolve, reject) => {
 
 getSomething();*/
 
+//promise combinators
+
+//big task
+
+//important task
+
+/*
+Promise.resolve(function () {
+  for (let i = 0; i < 10000; i++) {
+    console.log(i);
+  }
+}).then((data) => console.log(data()));
+
+console.log("important");
+
+Promise.reject(function () {
+  for (let i = 0; i < 10000; i++) {
+    console.log(i);
+  }
+}).then((data) => console.log(data()));
+*/
+
+//promise combinators
+
+const data = Promise.race([fetch(), fetch(), fetch()]);
+Promise.any();
+
+async function getData(url) {
+  const res = fetch(url[0]); //100ms
+  const res2 = fetch(url[1]); //200ms
+  const res3 = fetch(url[2]); //300ms
+
+  const data = await Promise.all([res, res2, res3]);
+
+  const data2 = await Promise.allSettled([res, res2, res3]);
+
+  for (let i = 0; i < 10; i++) {
+    console.log(i);
+  }
+}
