@@ -56,22 +56,22 @@ const deepclone2 = structuredClone(personDeep);
 const arr = [1, 2, 3, 4, 4];
 
 const [, , third, fourth] = arr;
-console.log({ third, fourth });
+console.log({third, fourth});
 
 //object destruct
 
 const person = {
-  name: "samad",
-  age: 18,
-  father: "abuuuu",
-  rel: {
-    cousin: "yusuf",
-  },
+    name: "samad",
+    age: 18,
+    father: "abuuuu",
+    rel: {
+        cousin: "yusuf",
+    },
 };
 
 const {
-  name: nameOfPerson = 10,
-  rel: { cousin },
+    name: nameOfPerson = 10,
+    rel: {cousin},
 } = person;
 
 console.log(cousin);
@@ -85,7 +85,7 @@ const arr2 = [...arr1];
 //console.log({ arr1, arr2 });
 
 function ran(one, two, three) {
-  //console.log(arguments);
+    //console.log(arguments);
 }
 
 const arr3 = [1, 2, 3, 3, 4, 5, 44, 4436];
@@ -93,11 +93,20 @@ ran(...arr3);
 
 //rest op(aram)
 const [first1, second, ...arr2] = arr;
-console.log({ first1, second, arr2 });
+console.log({first1, second, arr2});
 
 function ran(...arr) {
-  console.log(arr);
+    console.log(arr);
 }
 
 const arr3 = [1, 2, 3, 3, 4, 5, 44, 4436];
 ran(1, 2, 3, 4, 3, 5, 5);
+
+
+/*
+async await
+js tooling
+
+prototypical chain
+modules
+*/
