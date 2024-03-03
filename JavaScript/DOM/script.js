@@ -2,9 +2,7 @@
 
 //create two player
 
-
 //generate a number 100
-
 
 //start
 
@@ -21,3 +19,13 @@
 
 //p2
 //won
+
+function getName() {
+  const name = prompt("Enter name");
+
+  return function (e) {
+    e.target.textContent = name;
+  };
+}
+
+document.getElementById("0011").addEventListener("click", getName());
