@@ -91,6 +91,8 @@ function ran(one, two, three) {
 const arr3 = [1, 2, 3, 3, 4, 5, 44, 4436];
 ran(...arr3);
 
+
+//ran
 //rest op(aram)
 const [first1, second, ...arr2] = arr;
 console.log({first1, second, arr2});
